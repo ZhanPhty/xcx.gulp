@@ -16,14 +16,8 @@
 - source/ 
 	- 源代码根目录
 
-    - sass/
-        - 存放 .wxss 源码（使用sass语法编译）
-
-    - css/
-        - 编译后样式
-
-    - fonts/
-        - 存放 字体文件
+    - less/
+        - 存放 .wxss 源码（使用less语法编译）
 
     - images/
         - 存放 图片文件
