@@ -1,0 +1,105 @@
+
+
+@import "../../../base/fn.wxss";
+
+.weui-cell_input{
+    padding-top: 4rpx;
+    padding-bottom: 4rpx;
+}
+.weui-label{
+    width:@weuiCellLabelWidth;
+    .text_wrap();
+}
+.weui-input{
+    height: @weuiCellHeightEm;
+    min-height: @weuiCellHeightEm;
+    line-height: @weuiCellHeightEm;
+}
+.weui-toptips{
+    //display: none; // 通过 wx:if 来控制
+    position: fixed;
+    transform: translateZ(0);
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 5000;
+    .text_wrap();
+}
+.weui-toptips_warn{
+    background-color: @weuiColorWarn;
+}
+.weui-toptips_info{
+    background-color: @weuiTextBginfo;
+    color: @weuiTextColorinfo;
+    border-bottom: 1px solid @weuiLineColorLight;
+}
+.weui-toptips_tips{
+    background-color: rgba(0, 0, 0, .7);
+}
+.weui-toptips_prompt{
+    background-color: rgba(0, 0, 0, .7);
+    padding: 8px 6px;
+    top: 44%;
+    left: 58%;
+    transform: translate(-64%, -56%);
+    border-radius: 4px;
+}
+.weui-textarea{
+    display: block;
+    width: 100%;
+}
+.weui-cell_input .weui-textarea{
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    z-index: 0;
+}
+.weui-textarea-counter{
+    color: @weuiTextColorTips;
+    text-align: right;
+}
+.weui-textarea-counter_warn{
+    color: @weuiTextColorWarn;
+}
+.weui-cell_warn{
+    color: @weuiTextColorWarn;
+}
+
+// 圆角
+.weui-cells_wrapped {
+    margin: 0 @weuiBtnDefaultGap;
+    border: 1rpx solid @weuiCellBorderColor;
+    border-radius: 4rpx;
+    &:before {
+        border: 0;
+    }
+    &:after {
+        border: 0;
+    }
+}
+
+.weui-cells_wrapped::after {
+  border: 0rpx;
+}
+
+.weui-cells_wrapped + .weui-cells_wrapped {
+  margin-top: 15px;
+}
+
+// 带图标
+.weui-cells_icon {
+    [class^="icon-"] {
+        position: absolute;
+        font-size: 22px;
+        height: @weuiCellHeight;
+        line-height: @weuiCellHeight;
+    }
+
+    .weui-input {
+        padding-left: 36px;
+    }
+}
+

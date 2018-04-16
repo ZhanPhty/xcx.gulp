@@ -1,0 +1,67 @@
+
+
+@import "../../base/fn.wxss";
+
+.weui-btn{
+    margin-top: @weuiBtnDefaultGap;
+    border: 1rpx solid rgba(32,32,32,.1);
+    &:first-child{
+        margin-top: 0;
+    }
+}
+
+.weui-btn::after {
+    display: none
+}
+
+.weui-btn-area{
+    margin: @weuiCellsMarginTop @weuiBtnDefaultGap .3em;
+}
+
+button {
+    border-radius: 4rpx;
+
+    &[type="primary"] {
+        color: #fff;
+        background-color: @weuiColorPrimary;
+
+        &[plain] {
+            color: @weuiColorPrimary;
+            border:1px solid @weuiColorPrimary;
+            background-color: transparent;
+        }
+
+        &[loading] {
+            color: rgba(255, 255, 255, .6);
+            background-color: @weuiColorPrimary;
+        }
+
+        &[disabled] {
+            color: rgba(255, 255, 255, .6);
+            background-color: #6594da;
+        }
+    }
+
+    &:after {
+        border-radius: 4rpx;
+    }
+}
+
+.weui-btn__large {
+    border-radius: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.button-hover {
+    &[type="primary"] {
+        color: rgba(255,255,255,.6);
+        background-color: #2f6ecb;
+
+        &[plain] {
+            color: #488cf2;
+            border:1px solid #488cf2;
+            background-color: transparent;
+        }
+    }
+}
